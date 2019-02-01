@@ -16,16 +16,16 @@ String[].class.getName();
 返回的就是
 <code>[Ljava.lang.String</code>
 (其中的L代表的是在java内部的命名规则中的代表类或者接口的形式,如果是int[]则是返回的[I)</br>
-而getSimpleName()是在后面加上对应维度的[]
+而getSimpleName()是在后面加上对应维度的[]</br>
 如
 <code>
 String[][][].class.getSimpleName();
 String[][][]
 </code></br>
-还有一个 getCanonicalName()返回官方名字，如果官方名字不存在就会返回null(局部类和匿名内部类不存在官方名字)
+还有一个 getCanonicalName()返回官方名字，如果官方名字不存在就会返回null(局部类和匿名内部类不存在官方名字)</br>
 
 获取Class对象的修饰符
-getModifiers()
+getModifiers()</br>
 <code>
 public class Test{}
 Test.class.getModifiers()
@@ -53,7 +53,7 @@ Test.class.getModifiers()
 <code>public Constructor<T> getConstructor(Class<?>... parameterTypes)</code>，获取到被非private修饰的构造方法</br>
 <code>public Constructor<?>[] getDeclaredConstructors() throws SecurityException</code>，获取到所有的构造方法</br>
 <code>public Constructor<?>[] getConstructors() throws SecurityException</code> ，获取到被public修饰的构造方法</br>
-Constructor 不能从父类继承，所以就没有办法通过 getConstructor() 获取到父类的 Constructor。
+Constructor 不能从父类继承，所以就没有办法通过 getConstructor() 获取到父类的 Constructor。</br>
 
 Class属性的操作</br>
 <code>getGenericType()</code>，获取泛型属性类型</br>
