@@ -34,31 +34,31 @@ Test.class.getModifiers()
 
 
 获取Class对象的属性：（英文名叫Field）</br>
-getDeclaredField(),可以获取到被private修饰的属性，不能从父类获取属性</br>
-getField()，可以获取到非private修饰的属性，如果是当前类中不含有该属性，但是有父类存在的话，会从父类中寻找是否存在该属性</br>
-getDeclaredFields() ，注意这里多了一个s,该方法的意义在于获取所有的属性，但是不包含从父类继承过来的属性</br>
-getFields()，获取自身的所有public修饰的属性，并且包括从父类继承过来的</br>
+<code>getDeclaredField()</code>,可以获取到被private修饰的属性，不能从父类获取属性</br>
+<code>getField()</code>，可以获取到非private修饰的属性，如果是当前类中不含有该属性，但是有父类存在的话，会从父类中寻找是否存在该属性</br>
+<code>getDeclaredFields() </code>，注意这里多了一个s,该方法的意义在于获取所有的属性，但是不包含从父类继承过来的属性</br>
+<code>getFields()</code>，获取自身的所有public修饰的属性，并且包括从父类继承过来的</br>
 
 
 
 获取Class对象中的函数：（英文名叫Method）</br>
-getDeclaredMethod(String name, Class<?>... parameterTypes),获取到Class对象中的private修饰的方法，不包括父类（第一个参数方法名，第二个参数填写方法的参数）</br>
-getMethod(String name, Class<?>... parameterTypes)，获取到Class对象中的非private修饰的方法,包括父类</br>
-getDeclaredMethods() throws SecurityException，获取本Class中的所有方法，不包含从父类继承过来的</br>
-getMethod(String name, Class<?>... parameterTypes)，获取本Class中的所有Public修饰的方法，包括从父类继承过来的</br>
+<code>getDeclaredMethod(String name, Class<?>... parameterTypes)</code>,获取到Class对象中的private修饰的方法，不包括父类（第一个参数方法名，第二个参数填写方法的参数）</br>
+<code>getMethod(String name, Class<?>... parameterTypes)</code>，获取到Class对象中的非private修饰的方法,包括父类</br>
+<code>getDeclaredMethods() throws SecurityException</code>，获取本Class中的所有方法，不包含从父类继承过来的</br>
+<code>getMethod(String name, Class<?>... parameterTypes)</code>，获取本Class中的所有Public修饰的方法，包括从父类继承过来的</br>
 
 
 获取Class对象中的构造函数（Constructor）</br>
-public Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes),获取到被private修饰的构造方法
-public Constructor<T> getConstructor(Class<?>... parameterTypes)，获取到被非private修饰的构造方法
-public Constructor<?>[] getDeclaredConstructors() throws SecurityException，获取到所有的构造方法
-public Constructor<?>[] getConstructors() throws SecurityException ，获取到被public修饰的构造方法</br>
+<code>public Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)</code>,获取到被private修饰的构造方法
+<code>public Constructor<T> getConstructor(Class<?>... parameterTypes)</code>，获取到被非private修饰的构造方法
+<code>public Constructor<?>[] getDeclaredConstructors() throws SecurityException</code>，获取到所有的构造方法
+<code>public Constructor<?>[] getConstructors() throws SecurityException</code> ，获取到被public修饰的构造方法</br>
 Constructor 不能从父类继承，所以就没有办法通过 getConstructor() 获取到父类的 Constructor。
 
 Class属性的操作</br>
-getGenericType()，获取泛型属性类型
-getType()，获取属性类型
-getModifiers（）获取属性的修饰符
+<code>getGenericType()</code>，获取泛型属性类型
+<code>getType()</code>，获取属性类型
+<code>getModifiers()</code>获取属性的修饰符
 
 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。未完待续
 
