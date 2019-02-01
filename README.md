@@ -59,7 +59,91 @@ Class属性的操作</br>
 <code>getGenericType()</code>，获取泛型属性类型</br>
 <code>getType()</code>，获取属性类型</br>
 <code>getModifiers()</code>获取属性的修饰符</br>
+<code>public Object get(Object obj)</code>获得属性的值，参数填写要获取值的对象（该方法有一系列的值在此不多多列举，可以参考官方文档）</br>
+<code>public void set(Object obj, Object value);</code>设置属性的值，第一个参数填写设置值的对象，第二个值填写要设置的值</br>
+【注:】
+如果访问的值是private的，通过get获取值的时候会报错<code>java.lang.IllegalAccessException: Class com.xxx.xxx.xxx can not access a member of class com.xx.xx.x with modifiers "private"</code></br>
+此时只需要添加该代码，boolean值设置为true,即可解决<code>setAccessible(true);</code></br>
 
+Class中方法：</br>
+<code>getName() 获取方法名</br>
+<code>public Parameter[] getParameters()</code>获取到方法的参数</br>
+<code>public String getName() </code>获取参数名字</br>
+<code>public Class<?> getType() </code>获取参数类型</br>
+<code>public int getModifiers() </code>获取参数的修饰符</br>
+<code>public Class<?>[] getParameterTypes()</code> 获取所有的参数类型</br>
+<code>public Type[] getGenericParameterTypes()</code> 获取所有的参数类型，包括泛型</br>
+代码操作如下所示
+```
+        Class<Car> carClass = Car.class;
+        Method[] declaredMethods = carClass.getDeclaredMethods();
+        for (Method m: declaredMethods) {
+            System.out.println("方法名字："+m.getName());
+            Parameter[] parameters = m.getParameters();
+            for (Parameter p:parameters) {
+                System.out.println("参数名字："+p.getName()+"参数类型："+p.getType());
+            }
+            Class[] parameterTypes = m.getParameterTypes();
+            System.out.println("方法参数类型————————");
+            for (Class type:parameterTypes) {
+                System.out.println(" "+type.getName());
+            }
+```
+获取返回值：</br>
+`public Class<?> getReturnType()`获取返回值类型</br>
+`public Type getGenericReturnType()`获取返回值类型包括泛型</br>
+```
+        Class<Car> carClass = Car.class;
+        Method[] declaredMethods = carClass.getDeclaredMethods();
+        for (Method m:declaredMethods) {
+            System.out.println("方法的返回值类型："+m.getReturnType());
+            System.out.println("方法的泛型返回值类型："+m.getGenericReturnType());
+```
+```
+        方法的返回值类型：class java.lang.String
+        方法的泛型返回值类型：class java.lang.String
+        方法的返回值类型：class java.lang.String
+        方法的泛型返回值类型：class java.lang.String
+        方法的返回值类型：void
+        方法的泛型返回值类型：void
+```
+
+`public int getModifiers();`获取方法修饰符</br>
+`public Class<?>[] getExceptionTypes()` 获取异常类型</br>
+`public Type[] getGenericExceptionTypes()`获取泛型异常类型</br>
+
+方法的调用:
+`public Object invoke(Object obj, Object... args) `
+该方法中第一个Object参数是传入要调用方法的初始化之后的对象，第二个参数传入调用该方法所需要用到的的实际参数，静态方法中第一个参数为空，如果调用的方法不需要传入参数，那么直接为null;
+```
+        //测试静态方法的执行
+        Method testStatic = testMethodClass.getMethod("testStatic", null);
+        try {
+            testStatic.invoke(null, null);
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+```
+```
+        public class TestMethod {
+              private int add (int a,int b ) {
+                  return a + b;
+              }
+              
+              
+
+        TestMethod testMethod = new TestMethod();
+        //测试有参方法的执行
+        Method add = testMethodClass.getDeclaredMethod("add", int.class, int.class);
+        add.setAccessible(true);
+        int result = 0;
+        try {
+            result = (int) add.invoke(testMethod, 1, 2);
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        System.out.println("add方法执行的结果result="+result);
+```
 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。休息休息一下，未完待续！！
 
 本文档一部分内容来自于 https://blog.csdn.net/briblue/article/details/74616922    </br>
