@@ -114,7 +114,7 @@ Class中方法：</br>
 
 方法的调用:</br>
 `public Object invoke(Object obj, Object... args) `</br>
-该方法可以执行你通过反射得到的Class对象的方法第一个Object参数是传入要调用方法的初始化之后的对象，第二个参数传入调用该方法所需要用到的的实际参数，静态方法中第一个参数为空，如果调用的方法不需要传入参数，那么直接为null;
+该方法可以执行你通过反射得到的Class对象的方法，第一个Object参数是传入要调用方法的初始化之后的对象，第二个参数传入调用该方法所需要用到的的实际参数，静态方法中第一个参数为空，如果调用的方法不需要传入参数，那么直接为null;
 ```
         //测试静态方法的执行
         Method testStatic = testMethodClass.getMethod("testStatic", null);
