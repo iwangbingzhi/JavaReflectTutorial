@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
 //反射字段
 public class Test4 {
     public static void main(String[] args) throws Exception {
-        test3();
+        test1();
     }
     //反射字段   public String name = "wbz";
     public static void test1() throws Exception{
@@ -24,7 +24,7 @@ public class Test4 {
 
         if (type.equals(String.class)){
             String svalue = (String) obj;
-            System.out.println(svalue);
+            System.out.println("svalue:"+svalue);
         }
         //设置字段的值
         f.set(p,"wanglih");

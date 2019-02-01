@@ -31,6 +31,7 @@ public class Test3 {
         Method method = clazz.getMethod("method1", String.class, int.class);
         method.invoke(p, "wbz", 21);  //要获取方法肯定要创建对象
     }
+
     //反射类的方法：public Class[] method1(String name,int[] password)
   /*  public static void test3() throws Exception {
         Person p = new Person();

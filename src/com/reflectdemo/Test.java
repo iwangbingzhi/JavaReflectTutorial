@@ -7,8 +7,6 @@ package com.reflectdemo;
  */
 /*
 * 反射 加载类,获得类的字节码的三种方式
-*
-*
 * */
 public class Test {
     public static void main(String[] args) {

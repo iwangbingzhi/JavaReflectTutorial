@@ -17,10 +17,15 @@ public class Test2 {
     }
     //反射构造函数 public Person()
     public static void test1() throws Exception{
-        Class clazz = Class.forName("com.reflectdemo.Person");
+        /*Class clazz = Class.forName("com.reflectdemo.Person");
         Constructor constructor = clazz.getConstructor(null); //获取到要反射的是哪个构造函数,只能得到public类型的函数
         Person p = (Person) constructor.newInstance(null); //新建实例
+        System.out.println(p.name);*/
+        Class aClass = Class.forName("com.reflectdemo.Person");
+        Constructor constructor = aClass.getConstructor(null);
+        Person p = (Person) constructor.newInstance(null);
         System.out.println(p.name);
+
     }
 
     //反射构造函数 public Person(String name)
