@@ -73,7 +73,7 @@ Class中方法：</br>
 <code>public int getModifiers() </code>获取参数的修饰符</br>
 <code>public Class<?>[] getParameterTypes()</code> 获取所有的参数类型</br>
 <code>public Type[] getGenericParameterTypes()</code> 获取所有的参数类型，包括泛型</br>
-代码操作如下所示
+代码操作如下所示</br>
 ```
         Class<Car> carClass = Car.class;
         Method[] declaredMethods = carClass.getDeclaredMethods();
