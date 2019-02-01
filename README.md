@@ -112,8 +112,8 @@ Class中方法：</br>
 `public Class<?>[] getExceptionTypes()` 获取异常类型</br>
 `public Type[] getGenericExceptionTypes()`获取泛型异常类型</br>
 
-方法的调用:
-`public Object invoke(Object obj, Object... args) `
+方法的调用:</br>
+`public Object invoke(Object obj, Object... args) `</br>
 该方法中第一个Object参数是传入要调用方法的初始化之后的对象，第二个参数传入调用该方法所需要用到的的实际参数，静态方法中第一个参数为空，如果调用的方法不需要传入参数，那么直接为null;
 ```
         //测试静态方法的执行
