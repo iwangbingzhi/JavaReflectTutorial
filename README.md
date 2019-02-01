@@ -60,7 +60,7 @@ Class属性的操作</br>
 <code>getType()</code>，获取属性类型</br>
 <code>getModifiers()</code>获取属性的修饰符</br>
 
-。。。。。。。。。。。。。。。。。。。。。。。。。。。。。未完待续
+。。。。。。。。。。。。。。。。。。。。。。。。。。。。。休息休息一下，未完待续！！
 
 本文档一部分内容来自于 https://blog.csdn.net/briblue/article/details/74616922    </br>
 
