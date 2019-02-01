@@ -66,11 +66,11 @@ Class属性的操作</br>
 此时只需要添加该代码，boolean值设置为true,即可解决<code>setAccessible(true);</code></br>
 
 Class中方法：</br>
-<code>getName() 获取方法名</br>
+<code>getName()</code> 获取方法名</br>
 <code>public Parameter[] getParameters()</code>获取到方法的参数</br>
-<code>public String getName() </code>获取参数名字</br>
-<code>public Class<?> getType() </code>获取参数类型</br>
-<code>public int getModifiers() </code>获取参数的修饰符</br>
+<code>public String getName()</code>获取参数名字</br>
+<code>public Class<?> getType()</code>获取参数类型</br>
+<code>public int getModifiers()</code>获取参数的修饰符</br>
 <code>public Class<?>[] getParameterTypes()</code> 获取所有的参数类型</br>
 <code>public Type[] getGenericParameterTypes()</code> 获取所有的参数类型，包括泛型</br>
 代码操作如下所示</br>
