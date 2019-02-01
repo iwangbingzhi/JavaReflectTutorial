@@ -49,16 +49,16 @@ Test.class.getModifiers()
 
 
 获取Class对象中的构造函数（Constructor）</br>
-<code>public Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)</code>,获取到被private修饰的构造方法
-<code>public Constructor<T> getConstructor(Class<?>... parameterTypes)</code>，获取到被非private修饰的构造方法
-<code>public Constructor<?>[] getDeclaredConstructors() throws SecurityException</code>，获取到所有的构造方法
+<code>public Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)</code>,获取到被private修饰的构造方法</br>
+<code>public Constructor<T> getConstructor(Class<?>... parameterTypes)</code>，获取到被非private修饰的构造方法</br>
+<code>public Constructor<?>[] getDeclaredConstructors() throws SecurityException</code>，获取到所有的构造方法</br>
 <code>public Constructor<?>[] getConstructors() throws SecurityException</code> ，获取到被public修饰的构造方法</br>
 Constructor 不能从父类继承，所以就没有办法通过 getConstructor() 获取到父类的 Constructor。
 
 Class属性的操作</br>
-<code>getGenericType()</code>，获取泛型属性类型
-<code>getType()</code>，获取属性类型
-<code>getModifiers()</code>获取属性的修饰符
+<code>getGenericType()</code>，获取泛型属性类型</br>
+<code>getType()</code>，获取属性类型</br>
+<code>getModifiers()</code>获取属性的修饰符</br>
 
 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。未完待续
 
