@@ -42,7 +42,7 @@ Test.class.getModifiers()
 
 
 获取Class对象中的函数：（英文名叫Method）</br>
-<code>getDeclaredMethod(String name, Class<?>... parameterTypes)</code>,获取到Class对象中的private修饰的方法，不包括父类（第一个参数方法名，第二个参数填写方法的参数）
+<code>getDeclaredMethod(String name, Class<?>... parameterTypes)</code>,获取到Class对象中的private修饰的方法，不包括父类（第一个参数方法名，第二个参数填写方法的参数，个数是不定的，根据方法的参数个人来确定，并且传入的参数类型都必须是.class类型的）
 ```
 //如下所示
 Method methodtest = class1.getDeclaredMethod("test",int.class,float.class);
