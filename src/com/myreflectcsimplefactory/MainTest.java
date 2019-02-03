@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-//使用反射来实现简单工厂模式
+//使用反射实现简单工厂模式
 public class MainTest {
     @Test
     public void test1() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, ClassNotFoundException {
