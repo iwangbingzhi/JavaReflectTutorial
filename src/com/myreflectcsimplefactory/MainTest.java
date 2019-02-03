@@ -14,6 +14,6 @@ public class MainTest {
         Method getCar = carFactoryClass.getDeclaredMethod("getCar", String.class);
         Car car = (Car) getCar.invoke(carFactory, "com.myreflectcsimplefactory.Porche");
         String name = car.getName();
-        System.out.println("汽车的名字:"+name);
+        System.out.println("汽车名字:"+name);
     }
 }
