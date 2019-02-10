@@ -33,7 +33,7 @@ Test.class.getModifiers()
 此时返回的是一个数（1），在java内部都是通过数字代表着不同的修饰符，此时我们需要通过Modifier.toString()方法把该数值转换成字符串</br>
 
 
-## 获取Class对象的属性：（英文名叫Field）</br>
+## 获取Class对象的属性：（Field）</br>
 <code>getDeclaredField()</code>,可以获取到被private修饰的属性，不能从父类获取属性</br>
 <code>getField()</code>，可以获取到非private修饰的属性，如果是当前类中不含有该属性，但是有父类存在的话，会从父类中寻找是否存在该属性</br>
 <code>getDeclaredFields() </code>，注意这里多了一个s,该方法的意义在于获取所有的属性，但是不包含从父类继承过来的属性</br>
@@ -41,7 +41,7 @@ Test.class.getModifiers()
 
 
 
-## 获取Class对象中的函数：（英文名叫Method）</br>
+## 获取Class对象中的函数：（Method）</br>
 <code>getDeclaredMethod(String name, Class<?>... parameterTypes)</code>,获取到Class对象中的private修饰的方法，不包括父类（第一个参数方法名，第二个参数填写方法的参数，个数是不定的，根据方法的参数个人来确定，并且传入的参数类型都必须是.class类型的）
 ```
 //如下所示
