@@ -1,5 +1,4 @@
 # 反射总结：</br>
----
 ## 获取Class对象有三种方式：</br>
 1.使用对象的 getClass() 方法，如<code>var person = new Person;person.getClass();</code></br>
 2.使用 .class，如<code>int.class;Person.class;</code></br>
