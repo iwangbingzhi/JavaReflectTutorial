@@ -4,7 +4,6 @@
 2.使用 .class，如<code>int.class;Person.class;</code></br>
 3.使用 Class.forName()添加Class对象的路径。如<code>Class.forName("com.google.mybatis");</code></br>
 
-</br>
 ## 获取Class对象的相关信息：</br>
 1.getName();获取Class对象全限定类名 比如<code>"com.apple.test"</code></br>
 2.getSimpleName();直接获取对象的名字，不包含包名,比如<code>"test"</code></br>
